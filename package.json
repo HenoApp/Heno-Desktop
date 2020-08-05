@@ -1,0 +1,42 @@
+{
+  "name": "Heno",
+  "version": "1.0.0",
+  "description": "Official Heno Desktop App",
+  "devDependencies": {
+    "electron": "^9.1.1",
+    "electron-builder": "^22.7.0"
+  },
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ./src/main.js",
+    "deploy": "electron-builder --win --linux --publish always"
+  },
+  "author": {
+    "name": "Kaan Mutlu & Heno App",
+    "email": "kaan@heno.app",
+    "url": "https://kaanmutlu.com.tr"
+  },
+  "license": "ISC",
+  "homepage": "https://canary.heno.app",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/HenoApp/Heno-Desktop.git"
+  },
+  "build": {
+    "linux": {
+      "target": "deb",
+      "executableName": "Heno Canary",
+      "icon": "./src/assets",
+      "category": "Utility"
+    },
+    "win": {
+        "target": "portable",
+        "icon": "./src/assets"
+    },
+    "directories": {
+      "buildResources": "./src/assets"
+    }
+
+  }
+}
